@@ -80,7 +80,7 @@ def plot_stock_data(full_df: pd.DataFrame, plot_df: pd.DataFrame, ticker: str, d
     if is_above:
         title += f' Current: {above_percentile:.1f}th percentile'
     ax3.set_title(title, fontsize=10)
-    ax3.set_ylabel('Frequency')
+    ax3.set_ylabel('Frequency', fontsize=12)
     ax3.set_xlabel('Days')
     ax3.grid(True, alpha=0.3)
     if is_above:
@@ -93,7 +93,7 @@ def plot_stock_data(full_df: pd.DataFrame, plot_df: pd.DataFrame, ticker: str, d
     if not is_above:
         title += f' Current: {below_percentile:.1f}th percentile'
     ax4.set_title(title, fontsize=10)
-    ax4.set_ylabel('Frequency')
+    ax4.set_ylabel('Frequency', fontsize=12)
     ax4.set_xlabel('Days')
     ax4.grid(True, alpha=0.3)
     if not is_above:
@@ -102,4 +102,4 @@ def plot_stock_data(full_df: pd.DataFrame, plot_df: pd.DataFrame, ticker: str, d
 
     plt.tight_layout()
     plt.savefig(f'plots/{ticker.lower()}_{duration.name.lower()}_chart.png', dpi=300)
-    plt.show()
+    # plt.show()

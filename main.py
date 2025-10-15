@@ -2,7 +2,7 @@ from src.stock_data import get_stock_data
 from src.plot import plot_stock_data
 from src.durations import Durations
 
-TICKER = "QQQ"
+TICKER = "VOO"
 DURATION = Durations.TEN_YEARS
 
 if __name__ == "__main__":
